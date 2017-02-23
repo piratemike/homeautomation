@@ -61,7 +61,7 @@ def on_message(client1, userdata, message):
         if handler:
             handler(payload[3:].strip())
 
-mqtt_client.on_connect= on_connect
+mqtt_client.on_connect = on_connect
 mqtt_client.on_message=on_message
 mqtt_client.connect(broker_address)
 mqtt_client.subscribe([(ARDUINO_INCOMING_QUEUE, 0), (HEATER_CTRL_QUEUE, 0)])
