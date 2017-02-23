@@ -5,7 +5,7 @@ import serial
 from serial.threaded import LineReader, ReaderThread
 import paho.mqtt.client as mqtt
 
-INCOMMING = 'arduino/incoming'
+INCOMING = 'arduino/incoming'
 OUTGOING = 'arduino/outgoing'
 
 client = mqtt.Client()
@@ -17,7 +17,7 @@ class SerialDataReader(LineReader):
         print("port opened")
 
     def handle_line(self, data):
-        client.publish(INCOMMING, data)
+        client.publish(INCOMING, data)
         print('line received: {}\n'.format(data))
 
     def connection_lost(self, exc):

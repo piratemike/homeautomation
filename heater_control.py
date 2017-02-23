@@ -12,6 +12,7 @@ mqtt_client = mqtt.Client("heater_control")
 DESIRED_TEMP = 21
 HEATER_ON = False
 
+
 def on_connect(client, userdata, flags, rc):
     print("Connected")
 

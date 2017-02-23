@@ -1,7 +1,7 @@
 import paho.mqtt.client as mqtt
 import time
 
-broker_address="localhost"
+broker_address = "localhost"
 mqtt_client = mqtt.Client("arduino_message_handler")
 
 HEATER_CTRL_QUEUE = "heater_ctrl"
